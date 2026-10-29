@@ -1,0 +1,5 @@
+# Ignorar configurações locais do VS Code
+.vscode/
+
+# Ignorar o executável compilado (opcional, mas recomendado)
+*.exe
