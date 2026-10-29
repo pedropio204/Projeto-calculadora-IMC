@@ -17,11 +17,21 @@ int main() {
     printf("Ola! Seja bem-vindo(a)!\n");
     printf("Vamos cuidar da sua saude hoje?\n\n");
     
-    printf("Insira seu peso em KG: ");
-    scanf("%f", &peso); 
-    
-    printf("Agora insira sua altura em metros: ");
-    scanf("%f", &altura); 
+    do {
+        printf("Insira seu peso em KG (entre 1 e 500): ");
+        scanf("%f", &peso);
+        if (peso <= 0 || peso > 500) {
+            printf("Erro: Peso invalido! Tente novamente.\n\n");
+        }
+    } while (peso <= 0 || peso > 500);
+
+    do {
+        printf("Agora insira sua altura em metros (ex: 1.75): ");
+        scanf("%f", &altura);
+        if (altura < 0.5 || altura > 2.5) {
+            printf("Erro: Altura invalida! Tente novamente.\n\n");
+        }
+    } while (altura < 0.5 || altura > 2.5);
     
     imc = peso / (altura * altura); 
     
